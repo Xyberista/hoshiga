@@ -1,0 +1,11 @@
+[build]
+target = "./static/index.html"
+dist = "./dist/"
+
+[watch]
+watch = ["./static/", "./src/"]
+
+[[hooks]]
+stage = "pre_build"
+command = "tailwindcss"
+command_arguments = ["-c", "tailwind.config.js", "-i", "./src/styles/tailwind.css", "-o", "./static/css/output.css"]
