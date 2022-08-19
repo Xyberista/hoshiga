@@ -1,11 +1,8 @@
-use yew::prelude::*;
+mod app;
+pub mod components;
+pub mod routes;
 
-#[function_component(App)]
-pub fn app() -> Html {
-    html! {
-        <h1>{ "Hello, World!" }</h1>
-    }
-}
+use app::App;
 
 fn main() {
     yew::start_app::<App>();
