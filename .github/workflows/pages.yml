@@ -29,6 +29,12 @@ jobs:
           tar -xzf trunk.tar.gz
           sudo chmod a+x trunk
           sudo mv trunk /bin/trunk
+      
+      - name: Download tailwindcss executable
+        run: |
+          wget -qO tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/download/v3.1.8/tailwindcss-linux-x64
+          sudo chmod a+x tailwindcss
+          sudo mv tailwindcss /bin/tailwindcss
 
       - name: Build with Trunk
         run: trunk build
