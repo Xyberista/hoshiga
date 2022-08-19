@@ -31,9 +31,7 @@ jobs:
           sudo mv trunk /bin/trunk
 
       - name: Build with Trunk
-        run: |
-          cd dist
-          trunk build
+        run: trunk build
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
